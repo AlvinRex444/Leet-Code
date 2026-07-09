@@ -1,0 +1,33 @@
+class NumArray {
+    int pre[];
+
+    public NumArray(int[] nums) 
+    {
+        int ln=nums.length;
+        pre = new int[ln];
+        pre[0]=nums[0];
+        for(int i=1;i<ln;i++)
+        {
+            pre[i]=pre[i-1]+nums[i];
+        }
+    }
+     public int sumRange(int left, int right) 
+    {
+        int sum=0;
+        if(left>0)
+        {
+        sum=pre[right]-pre[left-1];
+        }
+        else
+        {
+        sum=pre[right];
+        }
+        return sum;
+    }
+}
+
+/**
+ * Your NumArray object will be instantiated and called as such:
+ * NumArray obj = new NumArray(nums);
+ * int param_1 = obj.sumRange(left,right);
+ */
