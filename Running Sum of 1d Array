@@ -1,0 +1,13 @@
+class Solution {
+    public int[] runningSum(int[] nums) 
+    {
+        int ln=nums.length;
+        int pre[]=new int[ln];
+        pre[0]=nums[0];
+        for(int i=1;i<ln;i++)
+        {
+            pre[i]=pre[i-1]+nums[i];
+        }
+        return pre;
+    }
+}
