@@ -1,16 +1,16 @@
 class Solution {
-    public void reverseString(char[] s) {
-        int left = 0;
-        int right = s.length - 1;
-
-        while (left < right) {
-            // Swap characters
-            char temp = s[left];
-            s[left] = s[right];
-            s[right] = temp;
-
-            left++;
-            right--;
-        }
+    public void reverseString(char[] s) 
+    {
+        int ln=s.length;
+       int l=0,r=ln-1;
+       char t=' ';
+       while(l<r)
+       {
+         t=s[l];
+         s[l]=s[r];
+         s[r]=t;
+         l++;
+         r--;
+       } 
     }
 }
