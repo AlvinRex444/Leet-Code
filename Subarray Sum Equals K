@@ -1,0 +1,20 @@
+class Solution {
+    public int subarraySum(int[] nums, int k) 
+    {
+        int ln=nums.length;
+        int x=0,sum=0;
+        for(int i=0;i<ln;i++)
+        {
+            sum=0; 
+            for(int j=i;j<ln;j++)
+            {
+             sum+=nums[j];
+             if(sum==k)
+            {
+               x++;
+            }
+            }
+        }
+        return x;
+}
+}
